@@ -1,0 +1,11 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'colors' as *;
+
+.left {
+  text-align: start;
+}
+
+.right {
+  text-align: end;
+}

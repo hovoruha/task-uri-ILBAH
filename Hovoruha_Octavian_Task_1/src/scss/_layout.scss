@@ -1,0 +1,289 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'colors' as *;
+
+// stiluri orientate mobile-first...
+
+.wrapper {
+  /* position: relative; */
+  @include flex-col(center, flex-start, no wrap);
+  width: 100%;
+  height: 100vh;
+}
+
+// definire stiluri header...
+.header {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 260px;
+  background : {
+    image: url("../images/image-hero-mobile.jpg");
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+    origin: border-box;
+  }
+
+  // stiluri navbar
+  &-navbar {
+    @include flex-col(center, space-around, no wrap);
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 15%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+
+    &.show {
+      transform: translateX(0%);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .logo a {
+      color: set-color("green");
+      font-weight: bolder;
+
+      &:hover {
+        color: set-color("white");
+      }
+    }
+
+    // .header-navbar_links li,
+    &_links {
+      @include flex-col(center, space-around, wrap);
+      height: 100vh;
+
+      li a {
+        margin-right: 0;
+        margin-bottom: 20px;
+        color: set-color("white");
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// definire stiluri showcase...
+.showcase {
+  position: absolute;
+  top: 250px;
+  width: 100%;
+  height: auto;
+  padding: 40px 5%;
+  padding-bottom: 10px;
+
+  &-item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: set-color("white");
+    border: 1px solid set-color("lightgray1");
+    border-radius: 10px;
+    padding: 40px 20px 30px 20px;
+    margin-bottom: 20px;
+
+    &_title {
+      font-size: 14px;
+    }
+
+    &_title,
+    &_content {
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    &_title.card {
+      @include flex-col(center, center, wrap);
+
+      span:first-child {
+        font-weight: bolder;
+      }
+
+      span:last-child {
+        color: set-color("green");
+      }
+    }
+
+    &_content {
+      font-size: 12px;
+      color: set-color("gray");
+    }
+
+    &_inputs {
+      @include flex-col(center, center, wrap);
+      padding-top: 10px;
+      margin-top: 15px;
+    }
+  }
+}
+
+body.modal,
+.showcase.modal {
+  overflow: hidden;
+}
+
+// definire stiluri butoane...
+.btn {
+  width: auto;
+  height: auto;
+  border-radius: 50px;
+  text-align: center;
+  background-color: set-color("green");
+  color: set-color("white");
+  padding: 10px 25px;
+  font-size: 12px;
+  // margin-bottom: 15px;
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color: set-color("green"), $amount: 5);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.bookmark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border-radius: 50px;
+  text-align: right;
+  background-color: set-color("lightgray1");
+  color: set-color("black2");
+  padding: 10px 20px 10px 50px;
+  margin-top: 15px;
+  font-size: 12px;
+
+  &::before {
+    content: url("../images/icon-bookmark.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 15px;
+    background-size: 36px 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color: set-color("lightgray1"), $amount: 10);
+  }
+}
+
+// definire stiluri showcase-data...
+.data-item {
+  padding: 10px 0;
+
+  div:first-child {
+    font : {
+      family: Arial, Helvetica, sans-serif;
+      weight: 900;
+      size: 16px;
+    }
+    color: set-color("black");
+    text-align: center;
+  }
+
+  &:nth-child(even) {
+    margin: 0 20px;
+  }
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border-radius: 15px;
+  background-color: set-color("lightgray2");
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 80%;
+    border-radius: 15px;
+    background-color: darken($color: set-color("green"), $amount: 2);
+  }
+}
+
+// definire stiluri data-card...
+.amount {
+  span:first-child {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  span:last-child {
+    color: set-color("gray");
+  }
+}
+
+.disable {
+  filter: grayscale(100%);
+
+  span {
+    color: set-color("gray");
+  }
+
+  .btn {
+    color: set-color("white");
+  }
+
+  p {
+    color: set-color("lightgray1");
+  }
+}
+
+#info {
+  position: relative;
+
+  &::before {
+    content: url("../images/logo-mastercraft.svg");
+    position: absolute;
+    top: -30px;
+    left: -28px;
+    margin-left: calc(100% / 2);
+    margin-bottom: 10px;
+  }
+
+  &:hover::before {
+    cursor: pointer;
+  }
+}
+
+#burger-menu::before {
+  content: url("../images/icon-hamburger.svg");
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+#burger-menu:hover {
+  cursor: pointer;
+}
+
+#modal-close {
+  // display: none;
+  display: block;
+}
+
+#modal-close::before {
+  content: url("../images/icon-close-menu.svg");
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+#modal-close:hover::before {
+  content: url("../images/icon-close-modal.svg");
+  cursor: pointer;
+}

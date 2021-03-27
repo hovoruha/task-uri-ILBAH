@@ -1,0 +1,25 @@
+@use 'index' as *;
+
+/* definire reset-uri generale... */
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: set-color("body-background");
+}
+/* ______________________________ */
