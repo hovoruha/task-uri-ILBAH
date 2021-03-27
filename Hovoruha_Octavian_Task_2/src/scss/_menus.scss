@@ -1,0 +1,71 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'config' as *;
+
+.app-header {
+  @include flex-row(center, space-between, nowrap);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 25px 10px 10px;
+  background-color: rgba($color: set-color($grays, "gray4"), $alpha: 0.1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 200px;
+    background: url("../assets/img/best-friends.jpg");
+    background : {
+      position: center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+
+  &_logo {
+    position: relative;
+    height: 60px; //ajustat pentru spaatiul rezidual de sub poza...
+
+    img {
+      width: 60px;
+    }
+
+    span {
+      position: absolute;
+      bottom: 1px;
+      left: 45px;
+      font-weight: bolder;
+      color: set-color($accents, "red");
+      white-space: nowrap;
+    }
+  }
+
+  &_menu {
+    position: relative;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span i {
+      color: set-color($accents, "black");
+      font-size: 25px;
+      transform: rotateZ(-25deg);
+    }
+
+    div {
+      display: block;
+      position: absolute;
+      bottom: -9px;
+      left: 6px;
+      font-weight: bolder;
+    }
+  }
+}

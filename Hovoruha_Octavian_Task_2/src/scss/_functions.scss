@@ -1,0 +1,5 @@
+@use 'config' as *;
+
+@function set-color($palette, $color) {
+  @return map-get($map: $palette, $key: $color);
+}

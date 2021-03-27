@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 25px 10px 10px;
+  background-color: rgba(94, 94, 94, 0.1);
+}
+.app-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 200px;
+  background: url("../assets/img/best-friends.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.app-header_logo {
+  position: relative;
+  height: 60px;
+}
+.app-header_logo img {
+  width: 60px;
+}
+.app-header_logo span {
+  position: absolute;
+  bottom: 1px;
+  left: 45px;
+  font-weight: bolder;
+  color: red;
+  white-space: nowrap;
+}
+.app-header_menu {
+  position: relative;
+  text-align: center;
+  font-size: 11px;
+  padding: 5px;
+}
+.app-header_menu:hover {
+  cursor: pointer;
+}
+.app-header_menu span i {
+  color: black;
+  font-size: 25px;
+  transform: rotateZ(-25deg);
+}
+.app-header_menu div {
+  display: block;
+  position: absolute;
+  bottom: -9px;
+  left: 6px;
+  font-weight: bolder;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */
