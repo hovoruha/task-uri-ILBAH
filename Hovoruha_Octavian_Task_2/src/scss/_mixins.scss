@@ -16,3 +16,8 @@
   justify-content: $justify;
   flex-wrap: $wrap;
 }
+
+@mixin special-bg-txt-col($color) {
+  background-color: set-color($accents, $color);
+  color: set-txt-col(set-color($accents, $color));
+}

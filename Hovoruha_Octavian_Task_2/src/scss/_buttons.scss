@@ -1,0 +1,30 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'config' as *;
+
+.btn {
+  width: 100%;
+
+  text: {
+    transform: uppercase;
+    align: center;
+  }
+  font: {
+    weight: bolder;
+    size: 20px;
+  }
+  padding: 8px 0;
+  background-color: red;
+  //   @include special-bg-txt-col(blue2);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+
+  span {
+    margin-left: 10px;
+
+    i {
+      transform: rotateZ(-25deg);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'config' as *;
+
+.blue {
+  @include special-bg-txt-col(blue2);
+}
+
+.anthr {
+  @include special-bg-txt-col(anthr);
+}
+
+.green {
+  @include special-bg-txt-col(green1);
+}
+
+.yellow {
+  @include special-bg-txt-col(yellow1);
+}

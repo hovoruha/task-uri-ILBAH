@@ -3,3 +3,13 @@
 @function set-color($palette, $color) {
   @return map-get($map: $palette, $key: $color);
 }
+
+@function set-txt-col($bg-col) {
+  @if (lightness($bg-col) > 60) {
+    @return set-color($accents, anthr);
+  } @else if($bg-col == set-color($accents, anthr)) {
+    @return set-color($accents, yellow1);
+  } @else {
+    @return set-color($accents, white1);
+  }
+}

@@ -4,12 +4,13 @@
 
 .app-header {
   @include flex-row(center, space-between, nowrap);
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 10px 25px 10px 10px;
-  background-color: rgba($color: set-color($grays, "gray4"), $alpha: 0.1);
+  background-color: set-color($accents, "blue1");
 
   &::before {
     content: "";
