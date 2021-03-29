@@ -52,11 +52,15 @@
 }
 .app-header_logo span {
   position: absolute;
-  bottom: 1px;
-  left: 45px;
-  font-weight: bolder;
-  color: red;
-  white-space: nowrap;
+  bottom: 10px;
+  left: 60px;
+  height: 30px;
+  width: 80px;
+  line-height: 0.8rem;
+  font-family: "Arial Black", sans-serif, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #525963;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .app-header_menu {
   position: relative;
@@ -133,11 +137,15 @@
 }
 .app-footer_bottom-logo span {
   position: absolute;
-  bottom: 1px;
-  left: 45px;
-  font-weight: bolder;
-  color: red;
-  white-space: nowrap;
+  bottom: 10px;
+  left: 60px;
+  height: 30px;
+  width: 80px;
+  line-height: 0.8rem;
+  font-family: "Arial Black", sans-serif, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #525963;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .app-footer_bottom-menu {
   position: relative;
@@ -170,6 +178,8 @@
   text-align: center;
   text-transform: uppercase;
   padding: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 .card-content {
   text-align: center;

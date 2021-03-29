@@ -33,11 +33,16 @@
 
     span {
       position: absolute;
-      bottom: 1px;
-      left: 45px;
-      font-weight: bolder;
-      color: set-color($accents, "red");
-      white-space: nowrap;
+      bottom: 10px;
+      left: 60px;
+      height: 30px;
+      width: 80px;
+      line-height: 0.8rem;
+      font-family: "Arial Black", sans-serif, Helvetica, sans-serif;
+      font-size: 20px;
+      color: set-color($accents, "anthr");
+      text-shadow: 2px 2px 3px
+        rgba($color: set-color($accents, black1), $alpha: 0.5);
     }
   }
 
@@ -116,11 +121,16 @@
 
       span {
         position: absolute;
-        bottom: 1px;
-        left: 45px;
-        font-weight: bolder;
-        color: set-color($accents, "red");
-        white-space: nowrap;
+        bottom: 10px;
+        left: 60px;
+        height: 30px;
+        width: 80px;
+        line-height: 0.8rem;
+        font-family: "Arial Black", sans-serif, Helvetica, sans-serif;
+        font-size: 20px;
+        color: set-color($accents, "anthr");
+        text-shadow: 2px 2px 3px
+          rgba($color: set-color($accents, black1), $alpha: 0.5);
       }
     }
 
