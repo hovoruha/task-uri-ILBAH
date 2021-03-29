@@ -10,21 +10,8 @@
 
 .main-section {
   @include flex-row(center, flex-start, wrap);
-  position: absolute;
-  top: 280px;
-  left: 0;
   width: 100%;
   height: 100%;
-  // height: calc(100% - 280px);
-  padding: 0 30px;
-  background-color: rgba($color: #000000, $alpha: 0.3);
-}
-
-.app-footer {
-  @include flex-col(center, center, wrap);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba($color: yellow, $alpha: 0.5);
+  padding: 0 30px 40px 30px;
+  margin-top: 200px;
 }

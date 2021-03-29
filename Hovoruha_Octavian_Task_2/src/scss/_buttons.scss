@@ -5,6 +5,10 @@
 .btn {
   width: 100%;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   text: {
     transform: uppercase;
     align: center;
@@ -14,8 +18,6 @@
     size: 20px;
   }
   padding: 8px 0;
-  background-color: red;
-  //   @include special-bg-txt-col(blue2);
   outline: none;
   border: none;
   border-radius: 5px;

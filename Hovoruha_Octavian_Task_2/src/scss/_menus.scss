@@ -4,10 +4,6 @@
 
 .app-header {
   @include flex-row(center, space-between, nowrap);
-  // position: fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 10px 25px 10px 10px;
   background-color: set-color($accents, "blue1");
@@ -53,12 +49,19 @@
 
     &:hover {
       cursor: pointer;
+
+      span i,
+      div {
+        color: darken($color: set-color($accents, anthr), $amount: 20%);
+        transition: color 0.3s ease;
+      }
     }
 
     span i {
-      color: set-color($accents, "black");
+      color: set-color($accents, anthr);
       font-size: 25px;
       transform: rotateZ(-25deg);
+      transition: color 0.3s ease;
     }
 
     div {
@@ -67,6 +70,79 @@
       bottom: -9px;
       left: 6px;
       font-weight: bolder;
+      color: set-color($accents, anthr);
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+.app-footer {
+  @include flex-col(center, center, wrap);
+  width: 100%;
+
+  &_nav {
+    @include special-bg-txt-col(anthr);
+    width: 100%;
+    text-transform: uppercase;
+    padding: 30px 20px 60px;
+    font-weight: 900;
+    font-size: 20px;
+
+    &-item {
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: darken($color: set-color($accents, yellow1), $amount: 30%);
+        transition: color 0.3s ease;
+      }
+    }
+  }
+
+  &_bottom {
+    @include flex-row(center, space-between, nowrap);
+    width: 100%;
+    padding: 10px 25px 10px 10px;
+    background-color: set-color($accents, "blue1");
+
+    &-logo {
+      position: relative;
+      height: 60px; //ajustat pentru spaatiul rezidual de sub poza...
+
+      img {
+        width: 60px;
+      }
+
+      span {
+        position: absolute;
+        bottom: 1px;
+        left: 45px;
+        font-weight: bolder;
+        color: set-color($accents, "red");
+        white-space: nowrap;
+      }
+    }
+
+    &-menu {
+      position: relative;
+      text-align: center;
+      padding: 5px 60px 5px 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      span i {
+        color: set-color($accents, anthr);
+        font-size: 30px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($color: set-color($accents, anthr), $amount: 20%);
+          transition: color 0.3s ease;
+        }
+      }
     }
   }
 }

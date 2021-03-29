@@ -4,16 +4,43 @@
 
 .blue {
   @include special-bg-txt-col(blue2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($color: set-color($accents, blue2), $amount: 10%);
+    transition: all 0.3s ease;
+  }
 }
 
 .anthr {
   @include special-bg-txt-col(anthr);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($color: set-color($accents, anthr), $amount: 10%);
+    transition: all 0.3s ease;
+  }
 }
 
 .green {
   @include special-bg-txt-col(green1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($color: set-color($accents, green1), $amount: 10%);
+    transition: all 0.3s ease;
+  }
 }
 
 .yellow {
   @include special-bg-txt-col(yellow1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken(
+      $color: set-color($accents, yellow1),
+      $amount: 10%
+    );
+    transition: all 0.3s ease;
+  }
 }

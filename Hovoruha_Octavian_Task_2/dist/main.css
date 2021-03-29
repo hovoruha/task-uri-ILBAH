@@ -15,26 +15,10 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  position: absolute;
-  top: 280px;
-  left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 30px;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.app-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 0, 0.5);
+  padding: 0 30px 40px 30px;
+  margin-top: 200px;
 }
 
 .app-header {
@@ -43,9 +27,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 10px 25px 10px 10px;
   background-color: #ebf6f8;
@@ -86,10 +67,16 @@
 .app-header_menu:hover {
   cursor: pointer;
 }
+.app-header_menu:hover span i,
+.app-header_menu:hover div {
+  color: #24272b;
+  transition: color 0.3s ease;
+}
 .app-header_menu span i {
-  color: black;
+  color: #525963;
   font-size: 25px;
   transform: rotateZ(-25deg);
+  transition: color 0.3s ease;
 }
 .app-header_menu div {
   display: block;
@@ -97,6 +84,77 @@
   bottom: -9px;
   left: 6px;
   font-weight: bolder;
+  color: #525963;
+  transition: color 0.3s ease;
+}
+
+.app-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.app-footer_nav {
+  background-color: #525963;
+  color: #ece493;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 30px 20px 60px;
+  font-weight: 900;
+  font-size: 20px;
+}
+.app-footer_nav-item {
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+.app-footer_nav-item:hover {
+  cursor: pointer;
+  color: #c4b522;
+  transition: color 0.3s ease;
+}
+.app-footer_bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 10px 25px 10px 10px;
+  background-color: #ebf6f8;
+}
+.app-footer_bottom-logo {
+  position: relative;
+  height: 60px;
+}
+.app-footer_bottom-logo img {
+  width: 60px;
+}
+.app-footer_bottom-logo span {
+  position: absolute;
+  bottom: 1px;
+  left: 45px;
+  font-weight: bolder;
+  color: red;
+  white-space: nowrap;
+}
+.app-footer_bottom-menu {
+  position: relative;
+  text-align: center;
+  padding: 5px 60px 5px 5px;
+}
+.app-footer_bottom-menu:hover {
+  cursor: pointer;
+}
+.app-footer_bottom-menu span i {
+  color: #525963;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+.app-footer_bottom-menu span i:hover {
+  color: #24272b;
+  transition: color 0.3s ease;
 }
 
 .card {
@@ -124,11 +182,39 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 30px;
   width: 100%;
 }
 .card-footer_item {
   width: 100%;
-  padding: 20px 20px;
+  padding: 0 20px 30px 20px;
+}
+.card-footer_item label {
+  display: block;
+  font-size: 17px;
+  color: gray;
+  margin-bottom: 5px;
+}
+.card-footer_item textarea {
+  width: 100%;
+  height: 150px;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: 1px solid darkgray;
+  resize: vertical;
+}
+.card-footer_item input[type] {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: 1px solid darkgray;
 }
 
 .btn {
@@ -138,10 +224,12 @@
   font-weight: bolder;
   font-size: 20px;
   padding: 8px 0;
-  background-color: red;
   outline: none;
   border: none;
   border-radius: 5px;
+}
+.btn:hover {
+  cursor: pointer;
 }
 .btn span {
   margin-left: 10px;
@@ -153,21 +241,41 @@
 .blue {
   background-color: #5d7893;
   color: white;
+  transition: all 0.3s ease;
+}
+.blue:hover {
+  background-color: #495f74;
+  transition: all 0.3s ease;
 }
 
 .anthr {
   background-color: #525963;
   color: #ece493;
+  transition: all 0.3s ease;
+}
+.anthr:hover {
+  background-color: #3b4047;
+  transition: all 0.3s ease;
 }
 
 .green {
   background-color: #68d73a;
   color: white;
+  transition: all 0.3s ease;
+}
+.green:hover {
+  background-color: #51b925;
+  transition: all 0.3s ease;
 }
 
 .yellow {
   background-color: #ece493;
   color: #525963;
+  transition: all 0.3s ease;
+}
+.yellow:hover {
+  background-color: #e4d968;
+  transition: all 0.3s ease;
 }
 
 * {
@@ -179,9 +287,10 @@
   text-decoration: none;
 }
 
-html {
-  width: 100%;
-  height: 100%;
+a,
+a:active,
+a:visited {
+  color: inherit;
 }
 
 body {
